@@ -1,5 +1,3 @@
-#Source: https://stackoverflow.com/questions/27889873/clustering-text-documents-using-scikit-learn-kmeans-in-python
-
 documents = ["to buy",
 "Buy Bike",
 "What's new.",
@@ -606,7 +604,7 @@ import numpy as np
 import csv
 import json
 
-# Rob
+# Rob - https://www.robertwinters.nl/2018/08/better-nps-analysis-using-nltk/
 def train_topics(training_docs):
     tfidf_vectorizer = TfidfVectorizer(stop_words='english')
     tf_idf = tfidf_vectorizer.fit_transform(training_docs)
@@ -642,6 +640,7 @@ def topic_keywords(nmf, feature_names, n_top_words=20):
 for row in topic_keywords(nmf, tf_features):
     print(json.dumps(row))
 
+#Source: https://stackoverflow.com/questions/27889873/clustering-text-documents-using-scikit-learn-kmeans-in-python
 '''
 #vectorize the text i.e. convert the strings to numeric features
 vectorizer = TfidfVectorizer(stop_words='english')
